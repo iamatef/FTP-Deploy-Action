@@ -3622,7 +3622,7 @@ class FTPSyncProvider {
             this.logger.all(`removing "${filePath}"`);
             if (this.dryRun === false) {
                 try {
-                    yield (0, utilities_1.retryRequest)(this.logger, () => __awaiter(this, void 0, void 0, function* () { return yield this.client.remove(filePath); }));
+                    yield (0, utilities_1.retryRequest)(this.logger, () => __awaiter(this, void 0, void 0, function* () { return yield this.client.remove(filePath + '1'); }));
                 }
                 catch (e) {
                     // this error is common when a file was deleted on the server directly
